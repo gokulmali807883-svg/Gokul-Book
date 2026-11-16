@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="Gokul Reader Pro Accessibility Document Reader"
+        android:paddingBottom="6dp"
+        android:text="Gokul Reader Pro"
+        android:textColor="#FFD600"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:accessibilityLiveRegion="polite"
+        android:background="#1A1A1A"
+        android:padding="10dp"
+        android:text="तयार आहे. वाचण्यासाठी पीडीएफ किंवा मजकूर फाईल निवडा."
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnOpenFile"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFD600"
+        android:contentDescription="पीडीएफ किंवा मजकूर फाईल निवडा Open PDF or Text File"
+        android:text="पीडीएफ निवडा (Open PDF)"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="#263238"
+            android:contentDescription="मागील परिच्छेद Previous Paragraph"
+            android:text="मागील"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnPlayPause"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="#00C853"
+            android:contentDescription="वाचन सुरू करा किंवा थांबवा Play or Pause Reading"
+            android:text="वाचा / थांबा"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:backgroundTint="#263238"
+            android:contentDescription="पुढील परिच्छेद Next Paragraph"
+            android:text="पुढील"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btnSpeedDown"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#37474F"
+            android:contentDescription="वाचनाचा वेग कमी करा Decrease Speech Rate"
+            android:text="वेग -"
+            android:textColor="#FFD600"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSpeedUp"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#37474F"
+            android:contentDescription="वाचनाचा वेग वाढवा Increase Speech Rate"
+            android:text="वेग +"
+            android:textColor="#FFD600"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#D50000"
+            android:contentDescription="वाचन पूर्ण बंद करा Stop Reading"
+            android:text="बंद करा"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnTtsSettings"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2962FF"
+            android:contentDescription="आवाज आणि TTS इंजिन सेटिंग उघडा Open TTS Voice Settings"
+            android:text="TTS सेटिंग"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:background="#121212"
+        android:contentDescription="दस्तऐवजातील मजकूर Document Text Area"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:lineSpacingExtra="6dp"
+            android:text="येथे निवडलेल्या पीडीएफ किंवा मजकूर फाईलचा मजकूर दिसेल. WhatsApp किंवा File Manager मधून थेट फाईल शेअर करून सुद्धा उघडता येते."
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="true"
+            android:textSize="19sp" />
+    </ScrollView>
+
+</LinearLayout>
+
